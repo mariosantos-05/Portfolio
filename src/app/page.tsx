@@ -32,23 +32,29 @@ export default function Home() {
         {/* The above is just background */}
         
 
-            <div className=' absolute left-[250px] z-50 bottom-30'> 
-            <Image src="/cloud.svg" alt="Example Icon" width={498} height={129}  />
-            </div>
 
         <div className='relative min-h-screen flex flex-row items-center justify-center '>
 
-                <div className='relative min-h-screen z-9 left-[-350px]'>
-                  <Button
-                      SvgIcon={() => <Image src="/buttons/sol.svg" alt="Example Icon" width={686} height={606}  />} // Use next/image
-                      altText=""
-                      onClick={() => setDark(!dark)}
-                    />
+                <div className='relative min-h-screen left-[-350px]'>
+                    <div className=' z-9'>
+                      <Button
+                          SvgIcon={() => <Image src="/buttons/sol.svg" alt="Example Icon" width={686} height={606}  />} // Use next/image
+                          altText=""
+                          onClick={() => setDark(!dark)}
+                        />
+
+                    </div>
+
+
+                    <div className=' absolute z-50 bottom-30 '> 
+                      <Image src="/cloud.svg" alt="Example Icon" width={498} height={129}  />
+                    </div>
+
                 </div>
     
       
 
-            <div className='absolute z-40 mx-10'>
+            <div className='absolute z-40 '>
 
               {showBox && (
                 <ContainerBox
@@ -56,30 +62,31 @@ export default function Home() {
                   onClose={() => setShowBox(false)}
                 >
 
-                  <div className='relative m-10 left-[10px] justify-center'>
-                    <Image src="/mario Here.svg" alt="" width={498} height={129}  />
+                  <div className='relative m-10 left-[10px] justify-center bg-amber-400 '>
+                    <Image src="/marioHere.svg" alt="" width={498} height={129}  />
                   </div>
               
-                  <div className="flex flex-row items-center justify-center space-x-20 p-10"> 
+                  <div className="flex flex-row justify-between space-x-20 p-10 items-end"> 
                     <Button
                       SvgIcon={() => <Image src="/buttons/about.svg" alt="About" width={128} height={115}  />} // Use next/image
                       altText="about"
                       onClick={() => console.log('about clicked!')}
                     />
                     <Button
-                      SvgIcon={() => <Image src="/buttons/work.svg" alt="work" width={156} height={106}  />} // Use next/image
+                      SvgIcon={() => <Image src="/buttons/work.svg" alt="About" width={128} height={115}  />} // Use next/image
                       altText="work"
-                      onClick={() => console.log('work clicked!')}
+                      onClick={() => console.log('placeholder!')}
                     />
+                    
                     <Button
-                      SvgIcon={() => <Image src="/buttons/contact.svg" alt="contact" width={100} height={190}  />} // Use next/image
+                      SvgIcon={() => <Image src="/buttons/contact.svg" alt="About" width={128} height={115}  />} // Use next/image
                       altText="contact"
-                      onClick={() => console.log('contact clicked!')}
+                      onClick={() => console.log('placeholder!')}
                     />
                     <Button
-                      SvgIcon={() => <Image src="/buttons/gallery.svg" alt="gallery" width={90} height={86  }  />} // Use next/image
+                      SvgIcon={() => <Image src="/buttons/gallery.svg" alt="About" width={128} height={115}  />} // Use next/image
                       altText="gallery"
-                      onClick={() => console.log('contact clicked!')}
+                      onClick={() => console.log('placeholder!')}
                     />
 
               
