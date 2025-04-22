@@ -36,9 +36,9 @@ export default function Home() {
             <Image src="/cloud.svg" alt="Example Icon" width={498} height={129}  />
             </div>
 
-        <div className='relative min-h-screen flex flex-row items-center justify-center  overflow-visible'>
+        <div className='relative min-h-screen flex flex-row items-center justify-center '>
 
-                <div className='relative  z-59'>
+                <div className='relative min-h-screen z-9 left-[-350px]'>
                   <Button
                       SvgIcon={() => <Image src="/buttons/sol.svg" alt="Example Icon" width={686} height={606}  />} // Use next/image
                       altText=""
@@ -48,24 +48,19 @@ export default function Home() {
     
       
 
-            <div className='absolute z-40 m-10 '>
+            <div className='absolute z-40 mx-10'>
 
               {showBox && (
                 <ContainerBox
                   name="Home"
                   onClose={() => setShowBox(false)}
                 >
-      <div className="text-black dark:text-white">
-        This text changes color in dark mode!
-        </div>
-          <div className="bg-gray-300 dark:bg-gray-800">
-          This background changes color in dark mode!
-        </div>
+
                   <div className='relative m-10 left-[10px] justify-center'>
                     <Image src="/mario Here.svg" alt="" width={498} height={129}  />
                   </div>
               
-                  <div className="flex flex-row items-center justify-center space-x-10 p-10"> 
+                  <div className="flex flex-row items-center justify-center space-x-20 p-10"> 
                     <Button
                       SvgIcon={() => <Image src="/buttons/about.svg" alt="About" width={128} height={115}  />} // Use next/image
                       altText="about"
