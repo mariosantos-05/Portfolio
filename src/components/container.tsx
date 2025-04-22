@@ -9,8 +9,8 @@ interface ContainerBoxProps {
 
 export default function ContainerBox({ name, onClose, children }: ContainerBoxProps) {
     return (
-        <div className="relative bg-[#D7F3FF] rounded-[22px] shadow w-full max-w-sm  outline outline-[4px] outline-[#1DA4A4] outline-offset-[0px]">
-            <div className="relative w-full max-w-sm h-[40px] bg-[#1DA4A4] rounded-t-[22px]">
+        <div className="relative bg-[#D7F3FF] rounded-[22px] shadow  outline outline-[4px] outline-[#1DA4A4] outline-offset-[0px]">
+            <div className="relative w-full  h-[40px] bg-[#1DA4A4] rounded-t-[21px]">
 
                 {/* Close button */}
                 <button
