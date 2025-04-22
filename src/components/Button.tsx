@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, SvgIcon, altText }) => {
         </button>
         </div>
         <div>
-            <p className="text-center text-[40px] w-[130px] text-black bottom-0 ">
+            <p className="text-center text-[40px] w-[130px] text-black bottom-0 dark:text-[#FDEBA1]">
                 {altText}
             </p>
         </div>
