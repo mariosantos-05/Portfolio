@@ -62,8 +62,8 @@ export default function Home() {
                   onClose={() => setShowBox(false)}
                 >
 
-                  <div className='relative m-10 left-[10px] justify-center bg-amber-400 '>
-                    <Image src="/marioHere.svg" alt="" width={498} height={129}  />
+                  <div className='relative flex m-10 right-10 justify-center '>
+                    <Image src="/mario Here.svg" alt="" width={498} height={129}  />
                   </div>
               
                   <div className="flex flex-row justify-between space-x-20 p-10 items-end"> 
