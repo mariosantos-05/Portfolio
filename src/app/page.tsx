@@ -5,6 +5,8 @@ import './globals.css';
 import ContainerBox from '@/components/container';
 import Button from '@/components/Button';
 import Image from 'next/image';
+import DragContainerBox from '@/components/DragContainerBox';
+import { DndContext } from '@dnd-kit/core';
 
 
 export default function Home() {
@@ -25,8 +27,8 @@ export default function Home() {
 
 
   return (
+    <DndContext>
     <div className="relative min-h-screen flex flex-col items-center justify-center">
-        
         <div className="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center z-0 pointer-events-none"></div>
         <div className="absolute inset-0 bg-[url('/nuvens.png')] bg-cover bg-center z-10 pointer-events-none bottom-75"></div>
         {/* The above is just background */}
@@ -57,7 +59,7 @@ export default function Home() {
             <div className='absolute z-40 '>
 
               {showBox && (
-                <ContainerBox
+                <DragContainerBox
                   name="Home"
                   onClose={() => setShowBox(false)}
                 >
@@ -93,11 +95,12 @@ export default function Home() {
                   </div>
               
               
-                </ContainerBox>
+                </DragContainerBox>
               )}
             </div>
 
       </div>
     </div>
+    </DndContext>
   );
 }
