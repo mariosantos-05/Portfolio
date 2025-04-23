@@ -9,7 +9,8 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ onClick, SvgIcon, altText }) => {
     return (
-        <div>
+        <div className='justify-center items center flex flex-col space-y-2'>
+        <div className='hover:scale-105'>
         <button
             onClick={onClick}
             style={{
@@ -22,8 +23,9 @@ const Button: React.FC<ButtonProps> = ({ onClick, SvgIcon, altText }) => {
         >
             <SvgIcon width="48" height="48" fill="currentColor" />
         </button>
+        </div>
         <div>
-            <p className="text-center text-[40px] text-black ">
+            <p className="text-center text-[40px] w-[130px] text-black bottom-0 dark:text-[#FDEBA1]">
                 {altText}
             </p>
         </div>
