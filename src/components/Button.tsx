@@ -10,7 +10,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ onClick, SvgIcon, altText }) => {
   return (
     <div className="justify-center items center flex flex-col space-y-2">
-      <div className="hover:scale-105">
+      <div className="hover:scale-115">
         <button
           onClick={onClick}
           style={{
