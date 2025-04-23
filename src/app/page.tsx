@@ -12,12 +12,11 @@ export default function Home() {
   const [showBox, setShowBox] = useState(true);
   const [dark, setDark] = useState(false);
 
-  // Detect user's preferred theme on initial load
   useEffect(() => {
     const userPrefersDark = window.matchMedia(
       '(prefers-color-scheme: dark)'
     ).matches;
-    setDark(userPrefersDark); // Set the initial theme based on the user's preference
+    setDark(userPrefersDark);
   }, []);
 
   useEffect(() => {
@@ -73,7 +72,7 @@ export default function Home() {
 
           <div className="absolute z-40 ">
             {showBox && (
-              <DragContainerBox name="Home" onClose={() => setShowBox(false)}>
+              <ContainerBox name="Home" onClose={() => setShowBox(false)}>
                 <div className="relative flex m-10 right-10 justify-center ">
                   {dark ? (
                     <Image
@@ -179,7 +178,7 @@ export default function Home() {
                     onClick={() => console.log('gallery!')}
                   />
                 </div>
-              </DragContainerBox>
+              </ContainerBox>
             )}
           </div>
         </div>
