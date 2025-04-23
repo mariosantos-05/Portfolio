@@ -9,6 +9,7 @@ import DragContainerBox from '@/components/DragContainerBox';
 import { DndContext } from '@dnd-kit/core';
 
 export default function Home() {
+  const [activeBoxes, setActiveBoxes] = useState<string[]>([]);
   const [showBox, setShowBox] = useState(true);
   const [dark, setDark] = useState(false);
 
@@ -27,6 +28,16 @@ export default function Home() {
     }
   }, [dark]);
 
+  const openBox = (name: string) => {
+    if (!activeBoxes.includes(name)) {
+      setActiveBoxes((prev) => [...prev, name]);
+    }
+  };
+
+  const closeBox = (name: string) => {
+    setActiveBoxes((prev) => prev.filter((box) => box !== name));
+  };
+
   return (
     <DndContext>
       <div className="relative min-h-screen flex flex-col items-center justify-center">
@@ -35,6 +46,18 @@ export default function Home() {
         {/* The above is just background */}
 
         <div className="relative min-h-screen flex flex-row items-center justify-center ">
+          <div className=" relative min-h-screen z-60">
+            {activeBoxes.map((box) => (
+              <DragContainerBox
+                key={box}
+                name={box}
+                onClose={() => closeBox(box)}
+              >
+                <h1 className="text-2xl text-blue-900">test test test test</h1>
+              </DragContainerBox>
+            ))}
+          </div>
+
           <div className="relative min-h-screen left-[-480px] ">
             <div className="relative z-9 dark:top-[110px]">
               <Button
@@ -111,7 +134,7 @@ export default function Home() {
                       )
                     } // Use next/image
                     altText="about"
-                    onClick={() => console.log('about clicked!')}
+                    onClick={() => openBox('about')}
                   />
                   <Button
                     SvgIcon={() =>
@@ -132,7 +155,7 @@ export default function Home() {
                       )
                     }
                     altText="work"
-                    onClick={() => console.log('work clicked!')}
+                    onClick={() => openBox('work')}
                   />
 
                   <Button
@@ -154,7 +177,7 @@ export default function Home() {
                       )
                     }
                     altText="contact"
-                    onClick={() => console.log('contact clicked!')}
+                    onClick={() => openBox('contact')}
                   />
                   <Button
                     SvgIcon={() =>
@@ -175,7 +198,7 @@ export default function Home() {
                       )
                     }
                     altText="gallery"
-                    onClick={() => console.log('gallery!')}
+                    onClick={() => openBox('gallery')}
                   />
                 </div>
               </ContainerBox>
