@@ -88,6 +88,15 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center z-0 pointer-events-none dark:bg-[url('/backgroundDark.png')]"></div>
         <div className="absolute inset-0 bg-[url('/nuvens.png')] bg-cover bg-center z-10 pointer-events-none bottom-75 dark:bg-[url('/stars.png')] dark:bottom-0 dark:z-45"></div>
+        <div
+          className="absolute inset-0 z-[9] pointer-events-none bg-no-repeat bg-center bg-contain top-8 hidden  2xl:dark:block dark:block "
+          style={{ backgroundImage: `url('/Group 3.svg')` }}
+        ></div>
+        <div
+          className="absolute inset-0 z-[9] pointer-events-none  bg-no-repeat bg-center bg-contain top-8 dark:hidden 2xl:block "
+          style={{ backgroundImage: `url('/Group 2.svg')` }}
+        ></div>
+        {/* TODO: adjust the sizes for both modes*/}
         {/* The above is just background */}
 
         <div className="relative min-h-screen flex flex-row items-center justify-center ">
