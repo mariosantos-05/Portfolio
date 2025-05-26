@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <DndContext>
-      <div className="relative min-h-screen  min-w-screen  overflow-hidden">
+      <div className="relative min-h-screen  min-w-screen  overflow-hidden select-none">
         <div className=" absolute z-60">
           {activeBoxes.map((box, index) => {
             const isFocused = box === focusedBox;
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="absolute z-40 ">
             {showBox && (
               <ContainerBox name="Home" onClose={() => setShowBox(false)}>
-                <div className="relative flex m-10 right-10 justify-center ">
+                <div className="relative flex m-10 right-10 justify-center select-none pointer-events-none ">
                   {dark ? (
                     <Image
                       src="/mario HereDark.svg"
@@ -147,7 +147,7 @@ export default function Home() {
                   )}
                 </div>
 
-                <div className="flex flex-row justify-between space-x-20 p-10 items-end">
+                <div className="flex flex-row justify-between space-x-20 p-10 items-end  ">
                   <Button
                     SvgIcon={() =>
                       dark ? (
