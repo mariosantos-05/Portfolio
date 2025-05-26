@@ -73,7 +73,7 @@ export default function Home() {
               >
                 <DragContainerBox
                   name={box}
-                  initialPosition={centerPosition}
+                  initialPosition={centerPosition || undefined}
                   onClose={() => closeBox(box)}
                 >
                   {box === 'about' && <About />}
