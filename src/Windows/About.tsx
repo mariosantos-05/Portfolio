@@ -3,76 +3,127 @@ import React from 'react';
 const About: React.FC = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-      <div className="min-w-[860px] min-h-[500px]">
+      <div className="min-w-[860px] min-h-[550px]">
         <div className=" flex justify-left items-center mx-10 mb-5 mt-6">
           <img
             src="/profile.png"
             alt="Profile"
             style={{ width: '150px', height: '150px', borderRadius: '50%' }}
           />
-          <h1 className="ml-16 text-[3rem] text-black dark:text-gray-300">
-            Mario Santos
-          </h1>
+          <div className=" ml-16 flex flex-col justify-center  dark:text-[#FDEBA1]">
+            <h1 className="text-[3rem] text-black dark:text-[#FDEBA1]">
+              Mario Santos
+            </h1>
+            <h2>
+              Developer pursuing a Bachelor's degree in Computer Engineering.
+            </h2>
+          </div>
         </div>
-        <div className=" mx-8 h-px bg-black dark:bg-gray-300 my-6"></div>
 
-        <div className="mx-10 text-black dark:text-gray-300  h-[220px] overflow-y-auto scrollbar-transparent ">
+        <div className=" mx-8 h-px bg-black dark:bg-[#FDEBA1] my-6"></div>
+
+        <div className="mx-10 text-black dark:text-[#FDEBA1]  h-[300px] overflow-y-auto scrollbar-transparent ">
+          <h1 className="text-4xl">Education</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            molestie eros in odio semper, vitae maximus nulla tincidunt. Sed
-            sagittis elit id nibh feugiat suscipit. Phasellus est velit, luctus
-            eu nibh sed, vehicula iaculis elit. Quisque euismod magna metus, sed
-            porta mauris tempor in. Donec tincidunt ultricies eros, eget
-            tincidunt dui hendrerit pretium. Nullam ac nisl nisi. Proin iaculis
-            interdum dictum. Proin porttitor nulla mi, quis egestas libero
-            egestas a. Proin lobortis, orci ut tincidunt gravida, neque lorem
-            aliquet mauris, vitae convallis mauris mauris non leo. Proin
-            lobortis aliquet velit at fringilla. Donec sed dictum leo, a
-            dignissim justo. Mauris egestas, mi nec varius bibendum, tellus
-            neque ornare velit, ac tincidunt neque enim ac dui. Sed volutpat
-            nisi nec ex convallis, ut consequat turpis venenatis. Aliquam
-            feugiat in nibh non viverra. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia curae; Etiam
-            placerat risus vel venenatis commodo. Sed vel felis vitae lorem
-            condimentum aliquet. Vestibulum feugiat magna dolor, et mattis mi
-            pulvinar quis. Sed molestie scelerisque felis scelerisque
-            sollicitudin. Proin tempus hendrerit neque at egestas. Cras nec quam
-            ac magna feugiat auctor. Mauris blandit tincidunt nisi. Proin
-            vestibulum in est porta pretium. Nullam ultrices eleifend commodo.
-            Suspendisse tristique mattis nisl in scelerisque. Aenean congue
-            porttitor tempor. In in suscipit urna, ut cursus mauris. Etiam
-            ultricies fringilla justo, ut ullamcorper lectus ultrices ut. Proin
-            feugiat magna non libero vulputate, vel ullamcorper lectus rhoncus.
-            Donec in felis quis dolor pretium scelerisque. Vivamus auctor
-            bibendum ipsum in lacinia. Maecenas varius erat eget magna placerat,
-            consectetur semper eros consectetur. Fusce feugiat vulputate nulla,
-            in venenatis felis congue vel. Mauris scelerisque risus nec velit
-            bibendum placerat. Aliquam erat volutpat. Phasellus odio nibh,
-            venenatis eget accumsan ac, suscipit pretium nunc. Integer vitae
-            aliquet ipsum. In venenatis nec neque eget suscipit. Fusce eros
-            lorem, fringilla eget neque a, tincidunt interdum dui. Mauris
-            venenatis, nibh quis tempus vestibulum, tortor ex consequat elit,
-            non volutpat ex ante eget leo. Duis vel justo sit amet elit
-            convallis viverra. Praesent eget porta nisi. Suspendisse et dictum
-            ex, in tincidunt tortor. Quisque elit eros, tincidunt ac odio eu,
-            tempor lobortis lorem. Aenean vel neque vitae nibh molestie varius
-            id vitae nisl. Vestibulum in auctor nisi, vitae sollicitudin quam.
-            Aenean interdum elit non pellentesque auctor. Mauris ut mi
-            imperdiet, tempus lectus non, tempor nunc. Quisque lectus neque,
-            placerat ut nisl vel, eleifend eleifend velit. Praesent quam augue,
-            dictum a nulla a, vulputate semper odio. Maecenas at auctor metus.
-            Nullam interdum pharetra facilisis. Mauris eu dolor orci. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere
-            cubilia curae; Vestibulum ultricies non diam vel lacinia. Phasellus
-            posuere dolor ipsum, faucibus cursus augue ullamcorper vitae. Mauris
-            vehicula magna enim, eget scelerisque mi aliquet et. Aenean eget
-            purus ornare, molestie ex sed, tristique neque. Nulla cursus
-            efficitur suscipit. Sed tortor dui, blandit non dolor in, rhoncus
-            molestie risus. Donec non augue vulputate, fermentum turpis non,
-            fermentum urna. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Maecenas condimentum lorem at dui lobortis egestas. Aenean non
-            imperdiet dolor.
+            Enrolled in an undergraduate Bachelor's program in Computer
+            Engineering at{' '}
+            <a
+              className="text-[#1DA4A4] dark:text-[#FDEBA1] hover:underline"
+              href="https://www.unb.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Universidade de Brasília
+            </a>
+            .
+            <br />
+            Expected graduation in 2027.
           </p>
+          <p className="mt-4">
+            Completed the{' '}
+            <a
+              className="text-[#1DA4A4] dark:text-[#FDEBA1] hover:underline"
+              href="https://www.huawei.com/minisite/seeds-for-the-future/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Huawei Seeds for the Future
+            </a>{' '}
+            training program.
+          </p>
+
+          <h1 className="text-4xl mt-2.5 ">Work and Research Experience</h1>
+
+          <ul className="list-disc pl-5">
+            <li className="mb-2">
+              <strong>
+                <a
+                  href="https://www.droidunb.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1DA4A4] dark:text-[#FDEBA1] hover:underline"
+                >
+                  Droid
+                </a>
+              </strong>{' '}
+              – Distrito Federal, Brazil
+              <br />
+              Member, Autonomous Robots Division. Participating in autonomous
+              robot competitions and collaborating on hardware and software
+              integration.
+            </li>
+
+            <li className="mb-2">
+              <strong>Competitive Programming</strong> – Distrito Federal,
+              Brazil
+              <br />
+              Volunteer Athlete. Competed in programming marathons, including
+              the Brazilian Computer Olympics (OBI).
+            </li>
+
+            <li className="mb-2">
+              <strong>
+                <a
+                  href="https://www.cjr.org.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1DA4A4] dark:text-[#FDEBA1] hover:underline"
+                >
+                  CJR
+                </a>
+              </strong>{' '}
+              – Distrito Federal, Brazil
+              <br />
+              Volunteer Junior Employee. Developed a web app for elementary
+              teacher reporting and proposed a project pattern adopted by 70+
+              colleagues.
+            </li>
+          </ul>
+
+          <h1 className="text-4xl mt-2.5">Lenguage proficience</h1>
+          <ul className="list-disc ml-5">
+            <li>Portuguese – Native</li>
+            <li>English – Advanced to Fluent</li>
+            <li>Spanish – Intermediate</li>
+            <li>Mandarin Chinese – Currently learning</li>
+          </ul>
+
+          <h1 className="text-4xl mt-2.5">Relevant Skills</h1>
+          <ul className="list-disc pl-6">
+            <li className="text-2xl mb-2 ">Programming</li>
+            <p className="pl-2">
+              Python 3, C/C++, JavaScript, HTML5, CSS3, TypeScript, PyTorch,
+              Haskell, Rust
+            </p>
+          </ul>
+
+          <ul className="list-disc pl-6">
+            <li className="text-2xl mb-2">Computation</li>
+            <p className="pl-2">
+              Visual Studio, Jupyter Notebook, Windows, LaTeX, Git & GitHub,
+              Bash, Linux
+            </p>
+          </ul>
         </div>
       </div>
     </div>
