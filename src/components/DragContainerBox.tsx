@@ -79,7 +79,7 @@ export default function DragContainerBox({
           className="absolute inset-0 cursor-move z-0 rounded-t-[19px]"
         ></div>
 
-        <h2 className="absolute left-[3%] top-[15%] text-amber-50 text-2xl dark:text-[#FDEBA1] z-10 pointer-events-none">
+        <h2 className="absolute left-[5%] top-[15%] text-amber-50 text-2xl dark:text-[#FDEBA1] z-10 pointer-events-none">
           {name}
         </h2>
 
@@ -90,7 +90,7 @@ export default function DragContainerBox({
             onClose();
           }}
         >
-          X
+          [ X ]
         </button>
       </div>
 
