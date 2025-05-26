@@ -94,23 +94,24 @@ export default function Home() {
           <div className="relative min-h-screen left-[-480px] ">
             <div className="relative z-9 dark:top-[110px]">
               <Button
-                SvgIcon={() =>
-                  dark ? (
+                SvgIcon={() => (
+                  <>
                     <Image
-                      src="/buttons/moon.png"
-                      alt="Example Icon"
-                      width={286}
-                      height={270}
-                    />
-                  ) : (
-                    <Image
+                      className="block dark:hidden"
                       src="/buttons/sun.svg"
-                      alt="Example Icon"
+                      alt="Light mode icon"
                       width={686}
                       height={606}
                     />
-                  )
-                }
+                    <Image
+                      className="hidden dark:block"
+                      src="/buttons/moon.png"
+                      alt="Dark mode icon"
+                      width={286}
+                      height={270}
+                    />
+                  </>
+                )}
                 altText=""
                 onClick={() => setDark(!dark)}
               />
@@ -129,22 +130,21 @@ export default function Home() {
           <div className="absolute z-40 ">
             {showBox && (
               <ContainerBox name="Home" onClose={() => setShowBox(false)}>
-                <div className="relative flex m-10 right-10 justify-center select-none pointer-events-none ">
-                  {dark ? (
-                    <Image
-                      src="/mario HereDark.svg"
-                      alt=""
-                      width={498}
-                      height={129}
-                    />
-                  ) : (
-                    <Image
-                      src="/mario Here.svg"
-                      alt=""
-                      width={498}
-                      height={129}
-                    />
-                  )}
+                <div className="relative flex m-10 right-10 justify-center select-none pointer-events-none">
+                  <Image
+                    className="block dark:hidden"
+                    src="/mario Here.svg"
+                    alt=""
+                    width={498}
+                    height={129}
+                  />
+                  <Image
+                    className="hidden dark:block"
+                    src="/mario HereDark.svg"
+                    alt=""
+                    width={498}
+                    height={129}
+                  />
                 </div>
 
                 <div className="flex flex-row justify-between space-x-20 p-10 items-end  ">
