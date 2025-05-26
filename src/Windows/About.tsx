@@ -14,7 +14,7 @@ const About: React.FC = () => {
             <h1 className="text-[3rem] text-black dark:text-[#FDEBA1]">
               Mario Santos
             </h1>
-            <h2>
+            <h2 className="text-[1.2rem] text-[#1DA4A4]  dark:text-[#cee7e5]">
               Developer pursuing a Bachelor's degree in Computer Engineering.
             </h2>
           </div>
@@ -28,7 +28,7 @@ const About: React.FC = () => {
             Enrolled in an undergraduate Bachelor's program in Computer
             Engineering at{' '}
             <a
-              className="text-[#1DA4A4] dark:text-[#FDEBA1] hover:underline"
+              className="text-[#1DA4A4] dark:text-[#cee7e5] hover:underline"
               href="https://www.unb.br/"
               target="_blank"
               rel="noopener noreferrer"
@@ -42,7 +42,7 @@ const About: React.FC = () => {
           <p className="mt-4">
             Completed the{' '}
             <a
-              className="text-[#1DA4A4] dark:text-[#FDEBA1] hover:underline"
+              className="text-[#1DA4A4] dark:text-[#cee7e5] hover:underline"
               href="https://www.huawei.com/minisite/seeds-for-the-future/index.html"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const About: React.FC = () => {
                   href="https://www.droidunb.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#1DA4A4] dark:text-[#FDEBA1] hover:underline"
+                  className="text-[#1DA4A4] dark:text-[#cee7e5] hover:underline"
                 >
                   Droid
                 </a>
@@ -87,7 +87,7 @@ const About: React.FC = () => {
                   href="https://www.cjr.org.br/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#1DA4A4] dark:text-[#FDEBA1] hover:underline"
+                  className="text-[#1DA4A4] dark:text-[#cee7e5] hover:underline"
                 >
                   CJR
                 </a>
