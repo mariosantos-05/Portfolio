@@ -16,7 +16,7 @@ const About: React.FC = () => {
         </div>
         <div className=" mx-8 h-px bg-black dark:bg-gray-300 my-6"></div>
 
-        <div className="mx-10 text-black dark:text-gray-300  h-[200px] overflow-y-auto scrollbar-transparent ">
+        <div className="mx-10 text-black dark:text-gray-300  h-[220px] overflow-y-auto scrollbar-transparent ">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             molestie eros in odio semper, vitae maximus nulla tincidunt. Sed
