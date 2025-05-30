@@ -11,6 +11,7 @@ import About from '@/Windows/About';
 import Work from '@/Windows/Work';
 import Contact from '@/Windows/Contact';
 import Gallery from '@/Windows/Gallery';
+import ImageModal from '@/components/ImageModal';
 
 export default function Home() {
   const [activeBoxes, setActiveBoxes] = useState<string[]>([]);
@@ -22,6 +23,11 @@ export default function Home() {
     y: number;
   } | null>(null);
 
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt?: string;
+  } | null>(null);
+
   useEffect(() => {
     const userPrefersDark = window.matchMedia(
       '(prefers-color-scheme: dark)'
@@ -31,8 +37,8 @@ export default function Home() {
 
   useEffect(() => {
     // This runs only on the client
-    const centerX = window.innerWidth / 2 - 150; // adjust 150 to half your box width
-    const centerY = window.innerHeight / 2 - 100; // adjust 100 to half your box height
+    const centerX = window.innerWidth / 2 - 250; // adjust 150 to half your box width
+    const centerY = window.innerHeight / 2 - 250; // adjust 100 to half your box height
 
     setCenterPosition({ x: centerX, y: centerY });
   }, []);
@@ -49,38 +55,55 @@ export default function Home() {
     if (!activeBoxes.includes(name)) {
       setActiveBoxes((prev) => [...prev, name]);
     }
-    setFocusedBox(name); // bring to front
+    setFocusedBox(name);
   };
 
   const closeBox = (name: string) => {
     setActiveBoxes((prev) => prev.filter((box) => box !== name));
+    // If the closed box is the image modal, clear selectedImage
+    if (name === 'image') setSelectedImage(null);
   };
 
   return (
     <DndContext>
-      <div className="relative min-h-screen  min-w-screen  overflow-hidden select-none">
-        <div className=" absolute z-60">
+      <div className="relative min-h-screen min-w-screen overflow-hidden select-none">
+        <div className="absolute z-60">
           {activeBoxes.map((box, index) => {
             const isFocused = box === focusedBox;
-            const zIndex = isFocused ? 100 + index : 50 + index;
+            // Give image box a very high zIndex so it's always on top
+            const zIndex =
+              box === 'image' ? 1000 : isFocused ? 100 + index : 50 + index;
 
             return (
               <div
                 key={box}
                 className="absolute"
                 style={{ zIndex }}
-                onMouseDown={() => setFocusedBox(box)} // Bring to front when clicked
+                onMouseDown={() => setFocusedBox(box)}
               >
-                <DragContainerBox
-                  name={box}
-                  initialPosition={centerPosition || undefined}
-                  onClose={() => closeBox(box)}
-                >
-                  {box === 'about' && <About />}
-                  {box === 'work' && <Work />}
-                  {box === 'contact' && <Contact />}
-                  {box === 'gallery' && <Gallery />}
-                </DragContainerBox>
+                {box === 'image' && selectedImage ? (
+                  <ImageModal
+                    src={selectedImage.src}
+                    alt={selectedImage.alt}
+                    onClose={() => {
+                      setSelectedImage(null);
+                      closeBox('image');
+                    }}
+                  />
+                ) : (
+                  <DragContainerBox
+                    name={box}
+                    initialPosition={centerPosition || undefined}
+                    onClose={() => closeBox(box)}
+                  >
+                    {box === 'about' && <About />}
+                    {box === 'work' && <Work />}
+                    {box === 'contact' && <Contact />}
+                    {box === 'gallery' && (
+                      <Gallery onImageClick={setSelectedImage} />
+                    )}
+                  </DragContainerBox>
+                )}
               </div>
             );
           })}
@@ -247,6 +270,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {selectedImage && (
+        <ImageModal
+          src={selectedImage.src}
+          alt={selectedImage.alt}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
     </DndContext>
   );
 }

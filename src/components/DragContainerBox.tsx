@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef, useState, useEffect } from 'react';
+import React, { ReactNode, useRef, useState, useEffect, memo } from 'react';
 import { useDraggable, useDndMonitor } from '@dnd-kit/core';
 
 interface DragContainerBoxProps {
