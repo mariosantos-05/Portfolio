@@ -1,17 +1,15 @@
 import React from 'react';
+import GitHubProjects from '../components/GitHubProjects';
 
 const Work: React.FC = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-      <div>
-        <h2>About Me</h2>
-        <p>Placeholder text about yourself</p>
+      <div className="min-w-[860px] min-h-[550px] bg-gray-50 dark:bg-gray-950 py-10">
+        <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">
+          My GitHub Projects
+        </h1>
+        <GitHubProjects />
       </div>
-      <img
-        src="/path-to-your-profile-picture.jpg"
-        alt="Profile"
-        style={{ width: '150px', height: '150px', borderRadius: '50%' }}
-      />
     </div>
   );
 };

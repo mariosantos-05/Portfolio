@@ -100,7 +100,7 @@ const About: React.FC = () => {
             </li>
           </ul>
 
-          <h1 className="text-4xl mt-2.5">Lenguage proficience</h1>
+          <h1 className="text-4xl mt-2.5">Language Proficiency</h1>
           <ul className="list-disc ml-5">
             <li>Portuguese – Native</li>
             <li>English – Advanced to Fluent</li>
