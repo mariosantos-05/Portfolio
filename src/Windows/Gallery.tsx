@@ -29,11 +29,7 @@ const images = [
     alt: 'Hatsune Illustration of a sunrise',
     description: 'Hatsune Illustration',
   },
-  {
-    src: '/Illustrations/lol.png',
-    alt: 'LOL Illustration of a sunrise',
-    description: 'LOL Illustration',
-  },
+
   {
     src: '/Illustrations/power.png',
     alt: 'Power Illustration of a sunrise',
